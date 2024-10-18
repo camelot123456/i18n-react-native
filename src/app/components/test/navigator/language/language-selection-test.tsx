@@ -1,12 +1,12 @@
 import { Entypo } from '@expo/vector-icons';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
-import { Alert, Text, TouchableHighlight, View } from 'react-native';
+import { Alert, Button, Text, TouchableHighlight, View } from 'react-native';
 
-function LanguageSelectionTest() {
+function LanguageSelectionTest({ navigation }) {
   const { t } = useTranslation();
   return (
-    <>
+    <View className="flex flex-1 bg-yellow-200 justify-center items-center">
       <Text>{t('initApp')}</Text>
       <TouchableHighlight
         className="border border-blue-800 rounded bg-blue-300 w-[100px] h-[30px] text-center m-4 px-px"
@@ -36,7 +36,8 @@ function LanguageSelectionTest() {
           <Entypo name="language" size={24} color="black" />
         </View>
       </TouchableHighlight>
-    </>
+      <Button title="Go to Home" onPress={() => navigation.navigate('home-test')} />
+    </View>
   );
 }
 

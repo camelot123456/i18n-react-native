@@ -15,7 +15,7 @@ function idioma(): string {
     var deviceLanguageSplit: string = deviceLanguage.split('_')[0];
     return deviceLanguageSplit;
   } catch (error) {
-    var idiomaDevuelve: string = 'es'; // Default language
+    var idiomaDevuelve: string = 'en'; // Default language
     return idiomaDevuelve; // Default in browser
   }
 }
