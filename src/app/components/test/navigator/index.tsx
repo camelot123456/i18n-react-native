@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import FilesScreen from 'src/app/components/test/navigator/files/files';
 import FolderScreen from 'src/app/components/test/navigator/folder/folder';
 import HomeScreen from 'src/app/components/test/navigator/home/home';
 import LanguageSelectionTest from 'src/app/components/test/navigator/language/language-selection-test';
@@ -31,6 +32,9 @@ function NavigatorScreenTest() {
       </Stack.Screen>
       <Stack.Screen name="folder-test" options={{ title: 'Folder' }} initialParams={{ initParam: 'Hello' }}>
         {(props) => <FolderScreen {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="files-test" options={{ title: 'Files Management' }}>
+        {(props) => <FilesScreen {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );

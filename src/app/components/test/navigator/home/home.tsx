@@ -11,6 +11,7 @@ function HomeScreen({ navigation }) {
         title="Test share params"
         color="#815511"
       />
+      <Button onPress={() => navigation.navigate('files-test')} title="Test CRUD" color="#78dc8b" />
     </View>
   );
 }
