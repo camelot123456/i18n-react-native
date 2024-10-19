@@ -36,7 +36,7 @@ function LanguageSelectionTest({ navigation }) {
           <Entypo name="language" size={24} color="black" />
         </View>
       </TouchableHighlight>
-      <Button title="Go to Home" onPress={() => navigation.navigate('home-test')} />
+      <Button title="Go to Home" onPress={() => navigation.navigate('home')} />
     </View>
   );
 }

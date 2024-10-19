@@ -12,7 +12,7 @@ import {
 
 const FilesHeaderLeft = ({ navigation }) => {
   const linkToCreate = () => {
-    navigation.push('files-test', { screen: 'files-edit-test', params: { action: 'new' } });
+    navigation.push('files', { screen: 'edit', params: { action: 'new' } });
   };
 
   return (

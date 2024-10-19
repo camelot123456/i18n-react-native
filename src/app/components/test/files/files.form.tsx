@@ -11,7 +11,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { FilesTest, useFilesStore } from 'src/app/components/test/navigator/files/files.store';
+import { FilesTest, useFilesStore } from 'src/app/components/test/files/files.store';
 import uuid from 'react-native-uuid';
 
 function FileForm({ route, navigation }) {
@@ -68,6 +68,7 @@ function FileForm({ route, navigation }) {
               editable
               multiline
               numberOfLines={4}
+              placeholder="Enter description"
               value={form?.description}
               onChangeText={(description) => setForm((prev) => ({ ...prev, description }))}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"

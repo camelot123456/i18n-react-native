@@ -1,11 +1,13 @@
 import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { useFilesStore } from 'src/app/components/test/navigator/files/files.store';
+import { useFilesStore } from 'src/app/components/test/files/files.store';
 
 function FilesScreen({ navigation }) {
   const { files } = useFilesStore();
+
   const handleFileDetail = (id: string) => {
-    navigation.push('files-test', { screen: 'files-detail-test', params: { id, action: 'edit' } });
+    navigation.push('files', { screen: 'detail', params: { id, action: 'edit' } });
   };
+
   return (
     <SafeAreaView className="h-full w-full bg-blue-50">
       <ScrollView className="py-1">

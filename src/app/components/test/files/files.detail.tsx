@@ -1,7 +1,7 @@
 import { AntDesign, Entypo, Feather, FontAwesome } from '@expo/vector-icons';
 import { useEffect } from 'react';
 import { Alert, Button, Image, Text, TouchableHighlight, View } from 'react-native';
-import { useFilesStore } from 'src/app/components/test/navigator/files/files.store';
+import { useFilesStore } from 'src/app/components/test/files/files.store';
 
 const FileDetail = ({ route, navigation }) => {
   const { id } = route.params;
@@ -30,7 +30,7 @@ const FileDetail = ({ route, navigation }) => {
   };
 
   const linkToEditScreen = () => {
-    navigation.push('files-test', { screen: 'files-edit-test', params: { id } });
+    navigation.push('files', { screen: 'edit', params: { id } });
   };
 
   return (
