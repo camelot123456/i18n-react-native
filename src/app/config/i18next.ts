@@ -4,6 +4,8 @@ import { initReactI18next } from 'react-i18next';
 import { Platform, NativeModules } from 'react-native';
 import en from 'assets/locales/en.json';
 import vi from 'assets/locales/vi.json';
+import en_test from 'assets/locales/en.test.json';
+import vi_test from 'assets/locales/vi.test.json';
 
 function idioma(): string {
   try {
@@ -20,14 +22,23 @@ function idioma(): string {
   }
 }
 
+const PROFILES = process.env.EXPO_PUBLIC_PROFILES;
+let resources;
+
+if (PROFILES.split(',').includes('test')) {
+  resources = {
+    en: en_test,
+    vi: vi_test,
+  };
+} else {
+  resources = { en, vi };
+}
+
 i18n.use(initReactI18next).init({
   lng: idioma(),
   fallbackLng: 'en',
   compatibilityJSON: 'v3',
-  resources: {
-    en,
-    vi,
-  },
+  resources,
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
