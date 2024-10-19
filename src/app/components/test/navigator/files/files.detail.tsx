@@ -2,7 +2,7 @@ import { AntDesign, Feather, FontAwesome } from '@expo/vector-icons';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, Image, Text, TouchableHighlight, View } from 'react-native';
-import { useFilesStore } from 'src/app/components/test/files/files.store';
+import { useFilesStore } from 'src/app/components/test/navigator/files/files.store';
 
 const FileDetail = ({ route, navigation }) => {
   const { id } = route.params;

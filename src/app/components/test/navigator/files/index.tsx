@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Keyboard, KeyboardAvoidingView, Platform, TouchableWithoutFeedback } from 'react-native';
-import FilesHeaderLeft from 'src/app/components/test/files/component/files.header-left';
-import FilesScreen from 'src/app/components/test/files/files';
-import FileDetail from 'src/app/components/test/files/files.detail';
-import FileForm from 'src/app/components/test/files/files.form';
+import FilesHeaderLeft from 'src/app/components/test/navigator/files/component/files.header-left';
+import FilesScreen from 'src/app/components/test/navigator/files/files';
+import FileDetail from 'src/app/components/test/navigator/files/files.detail';
+import FileForm from 'src/app/components/test/navigator/files/files.form';
 
 const Stack = createNativeStackNavigator();
 

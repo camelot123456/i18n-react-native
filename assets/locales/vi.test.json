@@ -6,6 +6,16 @@
         "title": "Màn hình chính",
         "testCrud": "Thử nghiệm CRUD"
       },
+      "language": {
+        "title": "Ngôn ngữ",
+        "header": "Chọn ngôn ngữ",
+        "langs": {
+          "vi": "Tiếng Việt",
+          "en": "Tiếng Anh"
+        },
+        "titleAlert": "Thông báo",
+        "messageAlert": "Bạn vừa chọn ngôn ngữ {{name}} !"
+      },
       "files": {
         "title": "Quản lý tệp",
         "headerLeft": {

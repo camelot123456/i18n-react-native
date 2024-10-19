@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from 'src/app/components/test/home/home';
-import FilesRoutes from 'src/app/components/test/files/index';
 import { useTranslation } from 'react-i18next';
+import DrawNavigator from 'src/app/components/test/navigator/drawer/index';
+import FilesRoutes from 'src/app/components/test/navigator/files/index';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,9 +20,7 @@ function NavigatorScreenTest() {
         headerTitleAlign: 'center',
       }}
     >
-      <Stack.Screen name="home" options={{ title: t('test.home.title', 'Home') }}>
-        {(props) => <HomeScreen {...props} />}
-      </Stack.Screen>
+      <Stack.Screen name="Root" options={{ headerShown: false }} component={DrawNavigator} />
       <Stack.Screen name="files" options={{ title: t('test.files.title', 'Files Management') }} component={FilesRoutes} />
     </Stack.Navigator>
   );

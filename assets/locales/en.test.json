@@ -6,6 +6,16 @@
         "title": "Home Screen",
         "testCrud": "CRUD Test"
       },
+      "language": {
+        "title": "Language",
+        "header": "Select Language",
+        "langs": {
+          "vi": "Vietnamese",
+          "en": "English"
+        },
+        "titleAlert": "Alert",
+        "messageAlert": "You have just selected the language {{name}} !"
+      },
       "files": {
         "title": "File Management",
         "headerLeft": {

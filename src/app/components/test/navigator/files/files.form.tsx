@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import uuid from 'react-native-uuid';
-import { FilesTest, useFilesStore } from 'src/app/components/test/files/files.store';
+import { FilesTest, useFilesStore } from 'src/app/components/test/navigator/files/files.store';
 
 function FileForm({ route, navigation }) {
   const { id, action } = route.params;

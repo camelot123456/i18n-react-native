@@ -1,5 +1,5 @@
 import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { useFilesStore } from 'src/app/components/test/files/files.store';
+import { useFilesStore } from 'src/app/components/test/navigator/files/files.store';
 
 function FilesScreen({ navigation }) {
   const { files } = useFilesStore();
