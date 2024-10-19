@@ -10,7 +10,7 @@ function FilesScreen({ navigation }) {
 
   return (
     <SafeAreaView className="h-full w-full bg-blue-50">
-      <ScrollView className="py-1">
+      <ScrollView>
         {files?.map((file) => (
           <TouchableOpacity
             key={file?.id}

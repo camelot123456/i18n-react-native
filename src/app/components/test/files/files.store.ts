@@ -85,7 +85,7 @@ export const useFilesStore = create<FilesStateCreatorTest>((set, get) => ({
   findFile: (id: string) => {
     const existing = get().files.find((f) => f.id == id);
     if (!existing) return;
-    set((state) => ({ file: existing }));
+    set(() => ({ file: existing }));
   },
   addFile: (file: FilesTest) => {
     set((state) => ({
