@@ -63,7 +63,7 @@ const DATA_SAMPLE = [
   },
 ];
 
-type FilesTest = {
+export type FilesTest = {
   id: string;
   name: string;
   description?: string;
@@ -89,7 +89,7 @@ export const useFilesStore = create<FilesStateCreatorTest>((set, get) => ({
   },
   addFile: (file: FilesTest) => {
     set((state) => ({
-      files: [...state.files, file],
+      files: [file, ...state.files],
     }));
   },
   updateFile: (modified: FilesTest) => {
@@ -97,8 +97,10 @@ export const useFilesStore = create<FilesStateCreatorTest>((set, get) => ({
       if (f.id == modified.id) return modified;
       return f;
     });
+
     set(() => ({
       files: filesModified,
+      file: modified,
     }));
   },
   deleteFile: (id: string) => {
