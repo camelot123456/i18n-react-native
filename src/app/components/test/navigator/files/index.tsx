@@ -1,6 +1,4 @@
-import { AntDesign } from '@expo/vector-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TouchableHighlight } from 'react-native';
 import FilesHeaderLeft from 'src/app/components/test/navigator/files/component/files.header-left';
 import FilesScreen from 'src/app/components/test/navigator/files/files';
 import FileDetail from 'src/app/components/test/navigator/files/files.detail';
@@ -20,16 +18,6 @@ export default () => {
         options={{
           header: (props) => <FilesHeaderLeft {...props} />,
           headerShown: true,
-          headerBackVisible: false,
-          title: 'Files List',
-          headerTitleAlign: 'center',
-          headerTitleStyle: { fontSize: 14, fontWeight: 'thin' },
-          headerStyle: { backgroundColor: '#efefef' },
-          headerRight: (props) => (
-            <TouchableHighlight activeOpacity={0.6} underlayColor="#DDDDDD" onPress={() => alert('Pressed!')}>
-              <AntDesign name="plus" size={24} color="black" />
-            </TouchableHighlight>
-          ),
         }}
       >
         {(props) => <FilesScreen {...props} />}
