@@ -1,10 +1,12 @@
-import { AntDesign, Entypo, Feather, FontAwesome } from '@expo/vector-icons';
+import { AntDesign, Feather, FontAwesome } from '@expo/vector-icons';
 import { useEffect } from 'react';
-import { Alert, Button, Image, Text, TouchableHighlight, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { Alert, Image, Text, TouchableHighlight, View } from 'react-native';
 import { useFilesStore } from 'src/app/components/test/files/files.store';
 
 const FileDetail = ({ route, navigation }) => {
   const { id } = route.params;
+  const { t } = useTranslation();
   const { file, findFile, deleteFile } = useFilesStore();
 
   useEffect(() => {
@@ -12,16 +14,16 @@ const FileDetail = ({ route, navigation }) => {
   }, [id]);
 
   const handleDelete = () => {
-    Alert.alert('Delete Confirm', `Do you want delete this file [${id}]?`, [
+    Alert.alert(t('test.files.detail.alert.title'), t('test.files.detail.alert.message', { id }), [
       {
-        text: 'Yes',
+        text: t('test.files.detail.alert.yesBtn'),
         onPress: () => {
           deleteFile(id);
           navigation.goBack();
         },
       },
       {
-        text: 'Cancel',
+        text: t('test.files.detail.alert.cancelBtn'),
         onPress: () => {
           return;
         },
@@ -40,8 +42,8 @@ const FileDetail = ({ route, navigation }) => {
       </View>
 
       <View className="mb-6">
-        <Text className="text-2xl font-bold text-gray-800 mb-2">{file?.name || 'Unnamed Folder'}</Text>
-        <Text className="text-base text-gray-600">{file?.description || 'No description available.'}</Text>
+        <Text className="text-2xl font-bold text-gray-800 mb-2">{file?.name || t('test.files.nameDefault')}</Text>
+        <Text className="text-base text-gray-600">{file?.description || t('test.files.detail.descDefault')}</Text>
       </View>
 
       <View className="flex-row justify-between gap-x-4">

@@ -1,5 +1,39 @@
 {
   "translation": {
-    "initApp": "Open up App.tsx to start working on your app!"
+    "test": {
+      "profiles": "Current profiles",
+      "home": {
+        "title": "Home Screen",
+        "testCrud": "CRUD Test"
+      },
+      "files": {
+        "title": "File Management",
+        "headerLeft": {
+          "search": "Search"
+        },
+        "detail": {
+          "alert": {
+            "title": "Delete Confirmation",
+            "message": "Do you want to delete this file ({{id}})?",
+            "yesBtn": "Yes",
+            "cancelBtn": "Cancel"
+          },
+          "nameDefault": "Unnamed File",
+          "descDefault": "No description"
+        },
+        "form": {
+          "name": "Name",
+          "description": "Description",
+          "logo": "Image URL",
+          "placeholder": {
+            "name": "Enter file name",
+            "description": "Enter description",
+            "logo": "Enter image URL"
+          },
+          "backBtn": "Back",
+          "submitBtn": "Submit"
+        }
+      }
+    }
   }
 }

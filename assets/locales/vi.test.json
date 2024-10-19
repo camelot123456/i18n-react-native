@@ -1,5 +1,39 @@
 {
   "translation": {
-    "initApp": "Hãy mở App.tsx để bắt đầu làm việc trên ứng dụng của bạn!"
+    "test": {
+      "profiles": "Hồ sơ hiện tại",
+      "home": {
+        "title": "Màn hình chính",
+        "testCrud": "Thử nghiệm CRUD"
+      },
+      "files": {
+        "title": "Quản lý tệp",
+        "headerLeft": {
+          "search": "Tìm kiếm"
+        },
+        "detail": {
+          "alert": {
+            "title": "Xác nhận xóa",
+            "message": "Bạn có muốn xóa xóa tệp này không ({{id}})?",
+            "yesBtn": "Có",
+            "cancelBtn": "Hủy"
+          },
+          "nameDefault": "Tệp chưa được đặt tên",
+          "descDefault": "Không có mô tả"
+        },
+        "form": {
+          "name": "Tên",
+          "description": "Mô tả",
+          "logo": "URL ảnh",
+          "placeholder": {
+            "name": "Nhập tên tệp",
+            "description": "Nhập mô tả",
+            "logo": "Nhập URL ảnh"
+          },
+          "backBtn": "Quay lại",
+          "submitBtn": "Gửi"
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,10 @@
 import { AntDesign, Feather, FontAwesome } from '@expo/vector-icons';
+import { useTranslation } from 'react-i18next';
 import { TextInput, TouchableHighlight, View } from 'react-native';
 
 const FilesHeaderLeft = ({ navigation }) => {
+  const { t } = useTranslation();
+
   const linkToCreate = () => {
     navigation.push('files', { screen: 'edit', params: { action: 'new' } });
   };
@@ -14,7 +17,7 @@ const FilesHeaderLeft = ({ navigation }) => {
       <TextInput
         inputMode="search"
         className="flex-1 bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Search"
+        placeholder={t('test.files.headerLeft.search')}
       />
       <TouchableHighlight activeOpacity={0.6} underlayColor="#DDDDDD" onPress={null} className="aspect-square p-[6px] rounded">
         <Feather name="search" size={24} color="black" />
