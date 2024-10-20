@@ -1,3 +1,4 @@
+import { AntDesign, Entypo } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTranslation } from 'react-i18next';
 import HeaderLeft from 'src/app/components/test/navigator/component/header-left';
@@ -13,6 +14,7 @@ export default (drawerProps) => {
     <Tab.Navigator
       initialRouteName="files"
       screenOptions={{
+        tabBarShowLabel: false,
         headerLeft: () => <HeaderLeft {...drawerProps} />,
         headerStyle: {
           backgroundColor: '#f4511e',
@@ -24,8 +26,21 @@ export default (drawerProps) => {
         headerTitleAlign: 'center',
       }}
     >
-      <Tab.Screen name="files" options={{ title: t('test.files.title', 'Files Management') }} component={FilesRoutes} />
-      <Tab.Screen name="language" options={{ title: t('test.language.title', 'Language') }}>
+      <Tab.Screen
+        name="files"
+        options={{
+          title: t('test.files.title', 'Files Management'),
+          tabBarIcon: (props) => <AntDesign name="file1" size={props.focused ? 22 : 20} color={props.color} />,
+        }}
+        component={FilesRoutes}
+      />
+      <Tab.Screen
+        name="language"
+        options={{
+          title: t('test.language.title', 'Language'),
+          tabBarIcon: (props) => <Entypo name="language" size={props.focused ? 22 : 20} color={props.color} />,
+        }}
+      >
         {(props) => <LanguageScreen {...props} />}
       </Tab.Screen>
     </Tab.Navigator>
