@@ -1,11 +1,11 @@
 import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { useFilesStore } from 'src/app/components/test/navigator/files/files.store';
+import { useFilesStore } from 'src/app/components/test/navigator/drawer/files/files.store';
 
 function FilesScreen({ navigation }) {
   const { files } = useFilesStore();
 
   const handleFileDetail = (id: string) => {
-    navigation.push('files', { screen: 'detail', params: { id, action: 'edit' } });
+    navigation.push('detail', { id, action: 'edit' });
   };
 
   return (

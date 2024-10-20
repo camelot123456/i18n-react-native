@@ -6,7 +6,7 @@ const FilesHeaderLeft = ({ navigation }) => {
   const { t } = useTranslation();
 
   const linkToCreate = () => {
-    navigation.push('files', { screen: 'edit', params: { action: 'new' } });
+    navigation.push('edit', { action: 'new' });
   };
 
   return (

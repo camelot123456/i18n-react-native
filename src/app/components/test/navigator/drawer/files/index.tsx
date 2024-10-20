@@ -1,15 +1,15 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Keyboard, KeyboardAvoidingView, Platform, TouchableWithoutFeedback } from 'react-native';
-import FilesHeaderLeft from 'src/app/components/test/navigator/files/component/files.header-left';
-import FilesScreen from 'src/app/components/test/navigator/files/files';
-import FileDetail from 'src/app/components/test/navigator/files/files.detail';
-import FileForm from 'src/app/components/test/navigator/files/files.form';
+import FilesHeaderLeft from 'src/app/components/test/navigator/drawer/files/component/files.header-left';
+import FilesScreen from 'src/app/components/test/navigator/drawer/files/files';
+import FileDetail from 'src/app/components/test/navigator/drawer/files/files.detail';
+import FileForm from 'src/app/components/test/navigator/drawer/files/files.form';
 
 const Stack = createNativeStackNavigator();
 
 export default () => {
   return (
-    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} className="flex-1 h-screen">
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} className="flex-1">
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Stack.Navigator
           screenOptions={{
